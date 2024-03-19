@@ -1,0 +1,35 @@
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" #mySidebar><br>
+  <div class="w3-container">
+    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu"
+      aria-label="close menu">
+      <i class="fa fa-remove"></i>
+    </a>
+    <img src="../../assets/headshot.png" style="width:45%;" class="w3-round">
+
+  </div>
+  <div class="w3-container w3-left-align w3-xlarge">
+    Alex Dimitrijeski
+  </div>
+  <style>
+    .active {
+      color: teal;
+    }
+  </style>
+  <div class="w3-bar-block">
+    <a routerLink="/home" (click)="w3_close()" class="w3-bar-item w3-button w3-padding" routerLinkActive="active"
+      [routerLinkActiveOptions]={exact:true}>
+      <i class="fa fa-home fa-fw w3-margin-right"></i>HOME</a>
+    <a routerLink="/about" (click)="w3_close()" class="w3-bar-item w3-button w3-padding" routerLinkActive="active">
+      <i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a>
+    <a routerLink="/resume" (click)="w3_close()" class="w3-bar-item w3-button w3-padding" routerLinkActive="active">
+      <i class="fa fa-th-large fa-fw w3-margin-right"></i>RESUME</a>
+  </div>
+  <div class="w3-panel w3-large">
+    <a href="https://www.linkedin.com/in/alex-dimitrijeski/" aria-label="linkedin"><i
+        class="fa fa-linkedin w3-hover-opacity"></i></a>&nbsp;
+    <a href="https://github.com/alexdimitrijeski" aria-label="github"><i class="fa fa-github w3-hover-opacity"></i></a>
+  </div>
+</nav>
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" (click)="w3_close()" style="cursor:pointer" title="close menu"
+  aria-label="close menu" #myOverlay></div>
